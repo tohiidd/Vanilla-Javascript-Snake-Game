@@ -1,0 +1,77 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c1a27;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#gameBoard {
+  width: 100vmin;
+  height: 100vh;
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+#gameOver,
+#gameStart {
+  width: 100vmin;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(35, 37, 70, 0.8);
+  color: white;
+}
+#gameStart {
+  display: flex;
+}
+.game-start-text {
+  font-size: 3rem;
+  font-weight: 900;
+  padding-top: 20%;
+  padding-bottom: 3%;
+}
+#startButton {
+  padding: 5px 15px;
+}
+.game-over-text {
+  padding-top: 20%;
+  color: rgb(219, 0, 0);
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+button {
+  color: white;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 300ms;
+  margin: 0 10px;
+}
+button:hover {
+  background-color: white;
+  color: #0c1a27;
+}
+.snake {
+  background-color: hsl(200, 100%, 50%);
+}
+
+.food {
+  background: url("../image/apple.png") center no-repeat;
+  background-size: cover;
+  width: 1fr;
+}
+.game-speed {
+  margin: 4% 4% 0 0;
+}
